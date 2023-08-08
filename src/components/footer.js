@@ -11,7 +11,8 @@ export default function Footer() {
     "opacity-50",
     "text-white",
     "p-4",
-    "w-full"
+    "w-full",
+    "min-h-full"
   );
   footer.innerHTML = `
     <p class='text-center'>Created by <a class='hover:underline' href=${contactInfo.github} target='_blank'>${contactInfo.name} </a></p>

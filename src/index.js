@@ -1,8 +1,12 @@
-import Footer from "./footer.js";
-import Header from "./header.js";
-import Main from "./main.js";
+import background from "./assets/background.jpg";
+import Footer from "./components/footer.js";
+import Header from "./components/header.js";
+import Main from "./components/main.js";
+
+document.body.style.overflowX = "hidden";
 
 const content = document.getElementById("content");
+content.style.backgroundImage = `url(${background})`;
 
 content.classList.add(
   "flex",
@@ -10,10 +14,12 @@ content.classList.add(
   "items-center",
   "justify-center",
   "min-h-screen",
-  "w-screen"
+  "w-screen",
+  "bg-cover",
+  "bg-no-repeat",
+  "overflow-x-hidden",
+  "bg-fixed"
 );
 
-content.append(Header(), Main(), Footer());
-console.log("Hello World!");
-const navBtns = document.querySelectorAll(".nav-button");
-console.log(navBtns);
+content.appendChild(Header());
+content.append(Main(), Footer());
